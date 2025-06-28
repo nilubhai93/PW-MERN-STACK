@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <div>
+        <!--header-->
+        <header class="w-full h-14 flex flex-row  justify-between w-[100%]  px-4 ">
+            <!--hamberger and youtube logo-->
+            <div class=" flex flex-row gap-8 items-center pl-4">
+                <!-- hamberger memu logo -->
+                <div class="cursor-pointer">
+                    <svg fill="#000000" height="32px" width="32px" version="1.1" id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 297 297" xml:space="preserve">
+                        <path d="M280.214,39.211H16.786C7.531,39.211,0,46.742,0,55.997v24.335c0,9.256,7.531,16.787,16.786,16.787h263.428
+				        c9.255,0,16.786-7.531,16.786-16.787V55.997C297,46.742,289.469,39.211,280.214,39.211z" />
+                        <path d="M280.214,119.546H16.786C7.531,119.546,0,127.077,0,136.332v24.336c0,9.255,7.531,16.786,16.786,16.786h263.428
+				        c9.255,0,16.786-7.531,16.786-16.786v-24.336C297,127.077,289.469,119.546,280.214,119.546z" />
+                        <path d="M280.214,199.881H16.786C7.531,199.881,0,207.411,0,216.668v24.335c0,9.255,7.531,16.786,16.786,16.786h263.428
+				        c9.255,0,16.786-7.531,16.786-16.786v-24.335C297,207.411,289.469,199.881,280.214,199.881z" />
+                    </svg>
+                </div>
+
+                <!-- Youtube logo -->
+                <div class="flex flex-row items-center gap-2 cursor-pointer ">
+                    <svg class="h-8 w-8 " version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 461.001 461.001" xml:space="preserve">
+                        <g>
+                            <path style="fill:#F61C0D;"
+                                d="M365.257,67.393H95.744C42.866,67.393,0,110.259,0,163.137v134.728
+		                    c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137
+		                    C461.001,110.259,418.135,67.393,365.257,67.393z M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607
+		                    c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z" />
+                        </g>
+                    </svg>
+                    <p class="font-extrabold text-lg"> YouTube<sup class="font-thin">IN</sup></p>
+                </div>
+
+            </div>
+
+            <!--Search ber and mic-->
+            <div class="flex flex-row gap-4 items-center  ">
+                <div class="px-2 flex flex-row gap-2 items-center border-2 border-black rounded-full p-1 bg-white">
+                    <!--search ber-->
+                    <input class="px-2  border-r-2 border-black" type="search " placeholder="Search">
+                    <div class="cursor-pointer">
+                        <svg class="h-4 w-4 " viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.9536 14.9458L21 21M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+
+                </div>
+                <!--mic icon-->
+                <svg class="h-8 w-8 bg-gray-100 rounded-full p-2 cursor-pointer" fill="#000000" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    enable-background="new 0 0 512 512">
+                    <path
+                        d="m439.5,236c0-11.3-9.1-20.4-20.4-20.4s-20.4,9.1-20.4,20.4c0,70-64,126.9-142.7,126.9-78.7,0-142.7-56.9-142.7-126.9 0-11.3-9.1-20.4-20.4-20.4s-20.4,9.1-20.4,20.4c0,86.2 71.5,157.4 163.1,166.7v57.5h-23.6c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4h88c11.3,0 20.4-9.1 20.4-20.4 0-11.3-9.1-20.4-20.4-20.4h-23.6v-57.5c91.6-9.3 163.1-80.5 163.1-166.7z" />
+                    <path
+                        d="m256,323.5c51,0 92.3-41.3 92.3-92.3v-127.9c0-51-41.3-92.3-92.3-92.3s-92.3,41.3-92.3,92.3v127.9c0,51 41.3,92.3 92.3,92.3zm-52.3-220.2c0-28.8 23.5-52.3 52.3-52.3s52.3,23.5 52.3,52.3v127.9c0,28.8-23.5,52.3-52.3,52.3s-52.3-23.5-52.3-52.3v-127.9z" />
+                </svg>
+            </div>
+
+            <!--Account Section-->
+            <div class="flex flex-row items-center gap-10 ">
+                <div class="h-8 w-8 flex flex-row items-center cursor-pointer">
+                    <img src="https://t4.ftcdn.net/jpg/02/28/25/39/240_F_228253927_XAS1gMFw5PwPB23YlTtuukXzHSUHFlBc.webp"
+                        alt="">
+                </div>
+                <div class="flex flex-row items-center cursor-pointer">
+                    <svg class="h-6 w-6" fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 611.999 611.999" xml:space="preserve">
+                        <path
+                            d="M570.107,500.254c-65.037-29.371-67.511-155.441-67.559-158.622v-84.578c0-81.402-49.742-151.399-120.427-181.203
+                               C381.969,34,347.883,0,306.001,0c-41.883,0-75.968,34.002-76.121,75.849c-70.682,29.804-120.425,99.801-120.425,181.203v84.578
+                               c-0.046,3.181-2.522,129.251-67.561,158.622c-7.409,3.347-11.481,11.412-9.768,19.36c1.711,7.949,8.74,13.626,16.871,13.626
+                               h164.88c3.38,18.594,12.172,35.892,25.619,49.903c17.86,18.608,41.479,28.856,66.502,28.856
+                               c25.025,0,48.644-10.248,66.502-28.856c13.449-14.012,22.241-31.311,25.619-49.903h164.88c8.131,0,15.159-5.676,16.872-13.626
+                               C581.586,511.664,577.516,503.6,570.107,500.254z M484.434,439.859c6.837,20.728,16.518,41.544,30.246,58.866H97.32
+                               c13.726-17.32,23.407-38.135,30.244-58.866H484.434z M306.001,34.515c18.945,0,34.963,12.73,39.975,30.082
+                               c-12.912-2.678-26.282-4.09-39.975-4.09s-27.063,1.411-39.975,4.09C271.039,47.246,287.057,34.515,306.001,34.515z
+                                M143.97,341.736v-84.685c0-89.343,72.686-162.029,162.031-162.029s162.031,72.686,162.031,162.029v84.826
+                               c0.023,2.596,0.427,29.879,7.303,63.465H136.663C143.543,371.724,143.949,344.393,143.97,341.736z M306.001,577.485
+                               c-26.341,0-49.33-18.992-56.709-44.246h113.416C355.329,558.493,332.344,577.485,306.001,577.485z" />
+                        <path d="M306.001,119.235c-74.25,0-134.657,60.405-134.657,134.654c0,9.531,7.727,17.258,17.258,17.258
+                               c9.531,0,17.258-7.727,17.258-17.258c0-55.217,44.923-100.139,100.142-100.139c9.531,0,17.258-7.727,17.258-17.258
+                               C323.259,126.96,315.532,119.235,306.001,119.235z" />
+                    </svg>
+                </div>
+                <div class="flex flex-row items-center cursor-pointer">
+                    <img class="h-8 w-8 rounded-full" src="niladri .jpg" alt="">
+                </div>
+            </div>
+
+        </header>
+
+
+        <!--main content-->
+        <div class="flex">
+            <!-- side bar-->
+            <aside class="">
+                <ul class="h-full w-24 gap-1 p-2 bg- flex flex-col  ">
+
+                    <li class="flex flex-col  items-center justify-center p-2 hover:bg-gray-200 rounded-2xl  cursor-pointer">
+                        <svg class="h-6 w-6" fill="#000000" viewBox="0 0 32 32" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M31.772 16.043l-15.012-15.724c-0.189-0.197-0.449-0.307-0.721-0.307s-0.533 0.111-0.722 0.307l-15.089 15.724c-0.383 0.398-0.369 1.031 0.029 1.414 0.399 0.382 1.031 0.371 1.414-0.029l1.344-1.401v14.963c0 0.552 0.448 1 1 1h6.986c0.551 0 0.998-0.445 1-0.997l0.031-9.989h7.969v9.986c0 0.552 0.448 1 1 1h6.983c0.552 0 1-0.448 1-1v-14.968l1.343 1.407c0.197 0.204 0.459 0.308 0.722 0.308 0.249 0 0.499-0.092 0.692-0.279 0.398-0.382 0.411-1.015 0.029-1.413zM26.985 14.213v15.776h-4.983v-9.986c0-0.552-0.448-1-1-1h-9.965c-0.551 0-0.998 0.445-1 0.997l-0.031 9.989h-4.989v-15.777c0-0.082-0.013-0.162-0.032-0.239l11.055-11.52 10.982 11.507c-0.021 0.081-0.036 0.165-0.036 0.252z">
+                            </path>
+                        </svg>
+                        <p class="text-sm">Home</p>
+                    </li>
+
+                    <li class="flex flex-col  items-center justify-center p-2 hover:bg-gray-200 rounded-2xl cursor-pointer">
+                        <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 256 256"
+                            xml:space="preserve">
+                            <defs>
+                            </defs>
+                            <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+                                transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                                <path
+                                    d="M 30.063 90 c -6.765 0 -13.323 -3.634 -16.759 -10.009 c -4.669 -8.691 -1.799 -19.627 6.535 -24.901 c 0.049 -0.03 0.099 -0.06 0.15 -0.086 c 0.673 -0.349 1.33 -0.708 1.989 -1.081 c -0.487 -0.279 -0.972 -0.555 -1.464 -0.83 c -5.12 -2.956 -8.263 -7.114 -9.115 -12.038 c -1.115 -6.588 -1.112 -14.914 8.886 -20.927 c 7.687 -4.595 15.564 -9.093 23.183 -13.444 c 2.527 -1.443 5.056 -2.887 7.585 -4.338 c 5.279 -3.008 11.797 -3.129 17.436 -0.329 c 5.692 2.826 9.569 8.152 10.373 14.247 c 1.166 7.769 -2.72 15.545 -9.677 19.315 c -0.449 0.254 -0.885 0.504 -1.313 0.751 c 0.409 0.244 0.816 0.483 1.227 0.715 c 5.715 3.216 9.323 8.684 9.899 14.999 c 0.568 6.244 -1.953 12.194 -6.916 16.325 c -1.584 1.287 -3.325 2.268 -5.008 3.216 c -0.487 0.274 -0.975 0.549 -1.455 0.83 c -7.804 4.547 -17.067 9.922 -26.608 15.32 C 36.162 89.271 33.091 90 30.063 90 z M 21.907 58.516 c -6.513 4.174 -8.746 12.756 -5.08 19.579 c 3.927 7.284 13.009 10.041 20.251 6.138 c 9.485 -5.367 18.734 -10.735 26.526 -15.275 c 0.497 -0.29 1.002 -0.574 1.507 -0.86 c 1.609 -0.906 3.129 -1.762 4.432 -2.821 c 3.918 -3.26 5.918 -7.958 5.472 -12.872 c -0.454 -4.984 -3.326 -9.314 -7.88 -11.877 c -0.734 -0.415 -1.449 -0.845 -2.191 -1.292 c -0.628 -0.378 -1.277 -0.769 -1.975 -1.172 c -0.61 -0.352 -0.99 -0.999 -1.001 -1.704 c -0.01 -0.705 0.352 -1.363 0.951 -1.732 c 1.398 -0.861 2.773 -1.671 4.329 -2.551 c 5.513 -2.987 8.576 -9.111 7.654 -15.256 c -0.635 -4.808 -3.695 -8.99 -8.192 -11.223 c -4.445 -2.207 -9.558 -2.125 -13.671 0.219 c -2.526 1.45 -5.057 2.895 -7.587 4.339 c -7.601 4.341 -15.462 8.83 -23.11 13.401 c -6.346 3.817 -8.376 8.691 -7 16.821 c 0.65 3.762 3.056 6.871 7.149 9.234 c 1.452 0.814 2.868 1.639 4.46 2.583 c 0.606 0.359 0.979 1.011 0.981 1.715 c 0.002 0.705 -0.367 1.359 -0.971 1.721 C 25.216 56.681 23.628 57.622 21.907 58.516 z"
+                                    style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                                    transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                <path
+                                    d="M 36.741 59.95 c -0.345 0 -0.69 -0.089 -0.999 -0.268 c -0.62 -0.357 -1.002 -1.018 -1.002 -1.733 V 32.417 c 0 -0.715 0.381 -1.375 1 -1.732 c 0.619 -0.357 1.382 -0.357 2 0 l 22.085 12.737 c 0.619 0.357 1 1.016 1.001 1.731 c 0.001 0.715 -0.38 1.374 -0.997 1.733 L 37.744 59.681 C 37.433 59.861 37.087 59.95 36.741 59.95 z M 38.741 35.88 V 54.48 l 16.088 -9.321 L 38.741 35.88 z"
+                                    style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                                    transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                            </g>
+                        </svg>
+                        <p class="text-sm">Shorts</p>
+                    </li>
+
+                    <li class="flex flex-col  items-center justify-center p-2 hover:bg-gray-200 rounded-2xl cursor-pointer">
+                        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd"
+                                d="M1.5 9C1.5 8.17157 2.17157 7.5 3 7.5H21C21.8284 7.5 22.5 8.17157 22.5 9V20C22.5 20.8284 21.8284 21.5 21 21.5H3C2.17157 21.5 1.5 20.8284 1.5 20V9ZM3 8.5C2.72386 8.5 2.5 8.72386 2.5 9V20C2.5 20.2761 2.72386 20.5 3 20.5H21C21.2761 20.5 21.5 20.2761 21.5 20V9C21.5 8.72386 21.2761 8.5 21 8.5H3Z"
+                                fill="black" fill-rule="evenodd" />
+                            <path clip-rule="evenodd"
+                                d="M9.76909 10.5565C9.93446 10.4704 10.134 10.4835 10.2867 10.5904L15.2867 14.0904C15.4204 14.1839 15.5 14.3368 15.5 14.5C15.5 14.6632 15.4204 14.8161 15.2867 14.9096L10.2867 18.4096C10.134 18.5165 9.93446 18.5296 9.76909 18.4435C9.60373 18.3574 9.5 18.1864 9.5 18V11C9.5 10.8136 9.60373 10.6426 9.76909 10.5565ZM10.5 11.9603V17.0397L14.1281 14.5L10.5 11.9603Z"
+                                fill="black" fill-rule="evenodd" />
+                            <path clip-rule="evenodd" d="M20 6H4V5H20V6Z" fill="black" fill-rule="evenodd" />
+                            <path clip-rule="evenodd" d="M18 3.5H6V2.5H18V3.5Z" fill="black" fill-rule="evenodd" />
+                        </svg>
+                        <p class="text-xs">Subscriptions</p>
+                    </li>
+
+                    <li class="flex flex-col  items-center justify-center px-3 py-2 hover:bg-gray-200 rounded-2xl cursor-pointer">
+                        <svg class="h-7 w-7" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 256"
+                            enable-background="new 0 0 256 256" xml:space="preserve">
+                            <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+                            <g>
+                                <g>
+                                    <path fill="#000000"
+                                        d="M213.8,44.2C213.8,44.2,213.8,44.2,213.8,44.2L213.8,44.2c-1.3-2.8-4-4.6-7.2-4.6c-0.5,0-0.9,0-1.4,0.1H19.3c-0.4-0.1-0.9-0.1-1.4-0.1c-4.4,0-7.9,3.6-7.9,8.1v189.9c0,0.9,0.1,1.8,0.4,2.6c0,0,0,0,0,0.1c0,0,0,0.1,0,0.1c0.1,0.3,0.2,0.7,0.4,1c1.3,2.6,4,4.4,7.1,4.4c0.2,0,0.4,0,0.7,0c0.1,0,0.2,0,0.4,0h186.7c0.1,0,0.2,0,0.3,0c0.2,0,0.4,0,0.7,0c2.7,0,5-1.3,6.4-3.4c0.7-0.9,1.2-2,1.3-3.1c0.1-0.6,0.2-1.1,0.2-1.7V47.7c0-0.7-0.1-1.4-0.3-2.1C214.2,45.1,214,44.7,213.8,44.2z M198.7,231.2H25.9V54.3h172.7L198.7,231.2L198.7,231.2z M245.9,17.1c-0.2-2.1-1.3-3.9-3.1-5.2c-1.1-0.8-2.4-1.4-3.7-1.6c-0.6-0.1-1.2-0.2-1.9-0.2H50.3c-4.8,0-8.7,3.3-8.7,7.4c0,4.1,3.9,7.4,8.7,7.4h179.8v183c0,4.6,3.6,8.4,7.9,8.4c4.4,0,7.9-3.7,7.9-8.4V18.7C246,18.2,246,17.6,245.9,17.1z M96.5,143.9c-0.1,16.6,0,26.8,1.5,27.4c6.7,2.6,9.5-1.4,13.7-4l26.3-16.1c7.6-4.6,7.6-12.2,0-16.8l-26.3-16.1c-4.1-2.5-13-7.6-14.7-3.3C96.1,117.1,96.6,130.7,96.5,143.9z" />
+                                </g>
+                            </g>
+                        </svg>
+                        <p class="text-sm"> You</p>
+                    </li>
+                </ul>
+            </aside>
+            <!-- video and option bar -->
+            <div class="flex flex-col w-full ">
+                <!--multiple option bar-->
+                <div id="intrest-keywords">
+                    <ul class="flex items-center my-2 ml-2 p-1 text-nowrap gap-2 overflow-x-auto text-[0.9rem] font-medium">
+                        <li class="bg-black text-white px-2 rounded-lg   cursor-pointer hover:bg-black hover:text-white ">All</li>
+                        <li class="bg-gray-100 px-2 rounded-lg  cursor-pointer hover:bg-black hover:text-white ">JavaScript</li>
+                        <li class="bg-gray-100 px-2 rounded-lg  cursor-pointer hover:bg-black hover:text-white ">Job Interview</li>
+                        <li class="bg-gray-100 px-2 rounded-lg  cursor-pointer hover:bg-black hover:text-white ">Music</li>
+                        <li class="bg-gray-100 px-2 rounded-lg  cursor-pointer hover:bg-black hover:text-white ">movie</li>
+                        <li class="bg-gray-100 px-2 rounded-lg  cursor-pointer hover:bg-black hover:text-white ">Al</li>
+                        <li class="bg-gray-100 px-2 rounded-lg  cursor-pointer hover:bg-black hover:text-white ">Git</li>
+                        <li class="bg-gray-100 px-2 rounded-lg  cursor-pointer hover:bg-black hover:text-white ">Movie</li>
+                        <li class="bg-gray-100 px-2 rounded-lg  cursor-pointer hover:bg-black hover:text-white ">Live</li>
+                        <li class="bg-gray-100 px-2 rounded-lg  cursor-pointer hover:bg-black hover:text-white ">History</li>
+                        <li class="bg-gray-100 px-2 rounded-lg  cursor-pointer hover:bg-black hover:text-white ">JavaScript</li>
+                        <li class="bg-gray-100 px-2 rounded-lg  cursor-pointer hover:bg-black hover:text-white ">Music</li>
+                        <li class="bg-gray-100 px-2 rounded-lg  cursor-pointer hover:bg-black hover:text-white ">movie</li>
+                        <li class="bg-gray-100 px-2 rounded-lg  cursor-pointer hover:bg-black hover:text-white ">Al</li>
+                        <li class="bg-gray-100 px-2 rounded-lg  cursor-pointer hover:bg-black hover:text-white ">Git</li>
+                        <li class="bg-gray-100 px-2 rounded-lg  cursor-pointer hover:bg-black hover:text-white ">Movie</li>
+                        <li class="bg-gray-100 px-2 rounded-lg  cursor-pointer hover:bg-black hover:text-white ">Live</li>
+                        <li class="bg-gray-100 px-2 rounded-lg  cursor-pointer hover:bg-black hover:text-white ">History</li>
+                        <li class="bg-gray-100 px-2 rounded-lg  cursor-pointer hover:bg-black hover:text-white ">JavaScript</li>
+
+                    </ul>
+                </div>
+
+                <!--video bar-->
+
+                <div class=" grid grid-cols-4 ">
+                    <div class="mb-4 m-2 rounded-full">
+                        <!--video1-->
+                        <div id="video " class="rounded-full">
+                            <iframe class="rounded-xl" width="100%" height="180"
+                                src="https://www.youtube.com/embed/BQmPVgWc9EE?si=_4_0Uu6chGLUG6fq"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <!--video info-->
+                        <div class="mt-2 flex flex-row gap-2">
+                            <div id="channel-logo" class="rounded-full  mt-2 ">
+                                <img width="65" class="rounded-[50%] block mx-auto  "
+                                    src="https://upload.wikimedia.org/wikipedia/commons/7/76/Physics_wallah_logo.jpg"
+                                    alt="channel-logo" />
+                            </div>
+                            <div class="">
+                                <p class="font-bold ">OpenAI GPT-4o : Live Demo of Most POWERFUL FEATURES 🔥🔥 | How to
+                                    Access GPT-4o</p>
+                                <div class="flex py-1 ">
+                                    <div >PW Skills Tech</div>
+                                    <div  title="verified">
+                                        <svg title="verified" class="w-4 ml-1" xmlns="http://www.w3.org/2000/svg"
+                                            height="24" viewBox="0 0 24 24" width="24" focusable="false"
+                                            style="pointer-events: none; display: inherit">
+                                            <path fill="#aaa"
+                                                d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9.8 17.3l-4.2-4.1L7 11.8l2.8 2.7L17 7.4l1.4 1.4-8.6 8.5z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p>45k views . 22 hours ago</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="mb-4 m-2 rounded-full">
+                        <!--video1-->
+                        <div id="video " class="rounded-full">
+                            <iframe class="rounded-xl" width="100%" height="180"
+                            src="https://www.youtube.com/embed/xkZq5BhN8ws?si=fRLZECEEFaeXnYjp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <!--video info-->
+                        <div class="mt-2 flex flex-row gap-2">
+                            <div id="channel-logo" class="rounded-full  mt-2 ">
+                                <img width="65" class="rounded-[50%] block mx-auto  "
+                                    src="https://upload.wikimedia.org/wikipedia/commons/7/76/Physics_wallah_logo.jpg"
+                                    alt="channel-logo" />
+                            </div>
+                            <div class="">
+                                <p class="font-bold ">What is DevOps and Cloud Computing? Simple Explanation</p>
+                                <div class="flex py-1 ">
+                                    <div >PW Skills Tech</div>
+                                    <div  title="verified">
+                                        <svg title="verified" class="w-4 ml-1" xmlns="http://www.w3.org/2000/svg"
+                                            height="24" viewBox="0 0 24 24" width="24" focusable="false"
+                                            style="pointer-events: none; display: inherit">
+                                            <path fill="#aaa"
+                                                d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9.8 17.3l-4.2-4.1L7 11.8l2.8 2.7L17 7.4l1.4 1.4-8.6 8.5z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p>45k views . 22 hours ago</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="mb-4 m-2 rounded-full">
+                        <!--video1-->
+                        <div id="video " class="rounded-full">
+                            <iframe class="rounded-xl" width="100%" height="180"
+                            src="https://www.youtube.com/embed/9aslEfN71H4?si=TT7ilNJjaxchEgNK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <!--video info-->
+                        <div class="mt-2 flex flex-row gap-2">
+                            <div id="channel-logo" class="rounded-full  mt-2 ">
+                                <img width="65" class="rounded-[50%] block mx-auto  "
+                                    src="https://w7.pngwing.com/pngs/393/802/png-transparent-bbc-news-online-logo-of-the-bbc-hbo-logo-television-text-rectangle-thumbnail.png"
+                                    alt="channel-logo"/>
+                            </div>
+                            <div class="">
+                                <p class="font-bold ">How mountain bikers are adapting bikes to cater for disability | BBC News</p>
+                                <div class="flex py-1 ">
+                                    <div >BBC NEWS</div>
+                                    <div  title="verified">
+                                        <svg title="verified" class="w-4 ml-1" xmlns="http://www.w3.org/2000/svg"
+                                            height="24" viewBox="0 0 24 24" width="24" focusable="false"
+                                            style="pointer-events: none; display: inherit">
+                                            <path fill="#aaa"
+                                                d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9.8 17.3l-4.2-4.1L7 11.8l2.8 2.7L17 7.4l1.4 1.4-8.6 8.5z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p>45k views . 22 hours ago</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="mb-4 m-2 rounded-full">
+                        <!--video1-->
+                        <div id="video " class="rounded-full">
+                            <iframe class="rounded-xl" width="100%" height="180"
+                                src="https://www.youtube.com/embed/BQmPVgWc9EE?si=_4_0Uu6chGLUG6fq"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <!--video info-->
+                        <div class="mt-2 flex flex-row gap-2">
+                            <div id="channel-logo" class="rounded-full  mt-2 ">
+                                <img width="65" class="rounded-[50%] block mx-auto  "
+                                    src="https://upload.wikimedia.org/wikipedia/commons/7/76/Physics_wallah_logo.jpg"
+                                    alt="channel-logo" />
+                            </div>
+                            <div class="">
+                                <p class="font-bold ">OpenAI GPT-4o : Live Demo of Most POWERFUL FEATURES 🔥🔥 | How to
+                                    Access GPT-4o</p>
+                                <div class="flex py-1 ">
+                                    <div >PW Skills Tech</div>
+                                    <div  title="verified">
+                                        <svg title="verified" class="w-4 ml-1" xmlns="http://www.w3.org/2000/svg"
+                                            height="24" viewBox="0 0 24 24" width="24" focusable="false"
+                                            style="pointer-events: none; display: inherit">
+                                            <path fill="#aaa"
+                                                d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9.8 17.3l-4.2-4.1L7 11.8l2.8 2.7L17 7.4l1.4 1.4-8.6 8.5z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p>45k views . 22 hours ago</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="mb-4 m-2 rounded-full">
+                        <!--video1-->
+                        <div id="video " class="rounded-full">
+                            <iframe class="rounded-xl" width="100%" height="180"
+                            src="https://www.youtube.com/embed/fsmk7rY04Cs?si=ORcrWLC42J9zu_TX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>       
+                        </div>
+                        <!--video info-->
+                        <div class="mt-2 flex flex-row gap-2">
+                            <div id="channel-logo" class="rounded-full  mt-2 ">
+                                <img width="35" class="rounded-[50%] block mx-auto  "
+                                    src="https://yt3.ggpht.com/uEeg3qZb5nkPHvAJmsG2TWmtI7KbDMbWYBbQte82vZHpIynJ5rsWnZSPOQ8Q_jJ77IaoqaoQK3s=s88-c-k-c0x00ffffff-no-rj"
+                                    alt="channel-logo" />
+                            </div>
+                            <div class="">
+                                <p class="font-bold "> Orientation Session : Computer Science & IT</p>
+                                <div class="flex py-1 ">
+                                    <div >GATE Wallah - CS & IT
+                                    </div>
+                                    <div  title="verified">
+                                        <svg title="verified" class="w-4 ml-1" xmlns="http://www.w3.org/2000/svg"
+                                            height="24" viewBox="0 0 24 24" width="24" focusable="false"
+                                            style="pointer-events: none; display: inherit">
+                                            <path fill="#aaa"
+                                                d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9.8 17.3l-4.2-4.1L7 11.8l2.8 2.7L17 7.4l1.4 1.4-8.6 8.5z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p>45k views . 22 hours ago</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="mb-4 m-2 rounded-full">
+                        <!--video1-->
+                        <div id="video " class="rounded-full">
+                            <iframe class="rounded-xl" width="100%" height="180"
+                                src="https://www.youtube.com/embed/BQmPVgWc9EE?si=_4_0Uu6chGLUG6fq"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <!--video info-->
+                        <div class="mt-2 flex flex-row gap-2">
+                            <div id="channel-logo" class="rounded-full  mt-2 ">
+                                <img width="65" class="rounded-[50%] block mx-auto  "
+                                    src="https://upload.wikimedia.org/wikipedia/commons/7/76/Physics_wallah_logo.jpg"
+                                    alt="channel-logo" />
+                            </div>
+                            <div class="">
+                                <p class="font-bold ">OpenAI GPT-4o : Live Demo of Most POWERFUL FEATURES 🔥🔥 | How to
+                                    Access GPT-4o</p>
+                                <div class="flex py-1 ">
+                                    <div >PW Skills Tech</div>
+                                    <div  title="verified">
+                                        <svg title="verified" class="w-4 ml-1" xmlns="http://www.w3.org/2000/svg"
+                                            height="24" viewBox="0 0 24 24" width="24" focusable="false"
+                                            style="pointer-events: none; display: inherit">
+                                            <path fill="#aaa"
+                                                d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9.8 17.3l-4.2-4.1L7 11.8l2.8 2.7L17 7.4l1.4 1.4-8.6 8.5z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p>45k views . 22 hours ago</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="mb-4 m-2 rounded-full">
+                        <!--video1-->
+                        <div id="video " class="rounded-full">
+                            <iframe class="rounded-xl" width="100%" height="180"
+                                src="https://www.youtube.com/embed/BQmPVgWc9EE?si=_4_0Uu6chGLUG6fq"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <!--video info-->
+                        <div class="mt-2 flex flex-row gap-2">
+                            <div id="channel-logo" class="rounded-full  mt-2 ">
+                                <img width="65" class="rounded-[50%] block mx-auto  "
+                                    src="https://upload.wikimedia.org/wikipedia/commons/7/76/Physics_wallah_logo.jpg"
+                                    alt="channel-logo" />
+                            </div>
+                            <div class="">
+                                <p class="font-bold ">OpenAI GPT-4o : Live Demo of Most POWERFUL FEATURES 🔥🔥 | How to
+                                    Access GPT-4o</p>
+                                <div class="flex py-1 ">
+                                    <div >PW Skills Tech</div>
+                                    <div  title="verified">
+                                        <svg title="verified" class="w-4 ml-1" xmlns="http://www.w3.org/2000/svg"
+                                            height="24" viewBox="0 0 24 24" width="24" focusable="false"
+                                            style="pointer-events: none; display: inherit">
+                                            <path fill="#aaa"
+                                                d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9.8 17.3l-4.2-4.1L7 11.8l2.8 2.7L17 7.4l1.4 1.4-8.6 8.5z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p>45k views . 22 hours ago</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="mb-4 m-2 rounded-full">
+                        <!--video1-->
+                        <div id="video " class="rounded-full">
+                            <iframe class="rounded-xl" width="100%" height="180"
+                                src="https://www.youtube.com/embed/BQmPVgWc9EE?si=_4_0Uu6chGLUG6fq"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <!--video info-->
+                        <div class="mt-2 flex flex-row gap-2">
+                            <div id="channel-logo" class="rounded-full  mt-2 ">
+                                <img width="65" class="rounded-[50%] block mx-auto  "
+                                    src="https://upload.wikimedia.org/wikipedia/commons/7/76/Physics_wallah_logo.jpg"
+                                    alt="channel-logo" />
+                            </div>
+                            <div class="">
+                                <p class="font-bold ">OpenAI GPT-4o : Live Demo of Most POWERFUL FEATURES 🔥🔥 | How to
+                                    Access GPT-4o</p>
+                                <div class="flex py-1 ">
+                                    <div >PW Skills Tech</div>
+                                    <div  title="verified">
+                                        <svg title="verified" class="w-4 ml-1" xmlns="http://www.w3.org/2000/svg"
+                                            height="24" viewBox="0 0 24 24" width="24" focusable="false"
+                                            style="pointer-events: none; display: inherit">
+                                            <path fill="#aaa"
+                                                d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9.8 17.3l-4.2-4.1L7 11.8l2.8 2.7L17 7.4l1.4 1.4-8.6 8.5z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p>45k views . 22 hours ago</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

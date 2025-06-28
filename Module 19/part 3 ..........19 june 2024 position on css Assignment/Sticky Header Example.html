@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Header Example</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header{
+            position: sticky;
+            padding:20px ;
+            background-color:#333 ;
+            color: white;
+            top:0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        .nav a{
+            color: rgb(170, 166, 166);
+            text-decoration: none;
+            margin: 0 10px;
+            padding:5px 0;
+        }
+        /* .nav button{
+            color:yellow ;
+            background-color: black;
+            
+        } */
+        .get-started{
+            border: 1px solid#ffcc00;
+            border-radius: 8px;
+            color:#ffcc00;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: transparent;
+        }
+
+        .content{
+            padding: 0 20px;
+        }
+        .content h1{
+            margin-top: 40px;
+        }
+        .content p{
+            margin : 20px 0;
+            line-height:1.6;
+        }
+
+        a:hover{
+            color: white;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">LOGO</div>
+        <nav class="nav">
+            <a href="#"> Home</a>
+            <a href="#"> Pricing</a>
+            <a href="#"> Contact</a>
+            <a href="#"> Terms and Conditions</a>
+            <button class="get-started"> Get Started</button>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1> Heading 1</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde maiores blanditiis incidunt libero nondignissimos molestias sed explicabo reiciendis doloremque.</p>
+
+        <h1> Heading 2</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro quidem deleniti rem autem ipsam, cumque exercitationem facilis iusto qui commodi omnis blanditiis mollitia neque placeat doloremque amet aperiam odit dolorem eaque sapiente esse atque repellat optio. A quod eos quae numquam aliquid quia, alias maiores placeat sed ullam excepturi iusto?</p>
+
+        <h1> Heading 3</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, cum! Neque suscipit, dignissimos accusantium dolorum ut voluptatem aliquam corporis impedit, animi magni inventore quos ad deleniti ipsum? Voluptate nulla quae minus modi veniam voluptatem accusantium sunt aliquam recusandae, molestias natus dolore repudiandae necessitatibus totam ea iure, aliquid id numquam blanditiis qui maxime! Voluptate quisquam voluptatem, vel blanditiis praesentium corporis quia.
+
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere voluptates perspiciatis quas incidunt quam, rerum cumque asperiores hic, tenetur earum dicta provident.
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam, reiciendis quo saepe voluptate error aut nostrum ratione fuga dignissimos odio unde, repellat amet sint itaque similique quam voluptatem provident!
+        </p>
+    </div>
+</body>
+
+</html>

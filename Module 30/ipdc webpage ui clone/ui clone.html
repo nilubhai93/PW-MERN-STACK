@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Web Page </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="relative h-screen bg-no-repeat bg-cover bg-center bg-[url('Assets/background-image.png')] overflow-auto">
+
+
+
+    <nav class="flex flex-row justify-between px-8 lg:px-20 items-center sticky ">
+        <div class="hover:cursor-pointer">
+            <img src="Assets/website-logo.png" alt="">
+        </div>
+        <div>
+            <ul class="flex flex-row gap-3 lg:gap-10">
+                <li class="hover:cursor-pointer hover:text-gray-400 hover:scale-105"> SME</li>
+                <li class="hover:cursor-pointer hover:text-gray-400 hover:scale-105">RETAIL</li>
+                <li class="hover:cursor-pointer hover:text-gray-400 hover:scale-105">CORPORATE</li>
+                <li class="hover:cursor-pointer hover:text-gray-400 hover:scale-105">ABOUT US</li>
+                <li class="hover:cursor-pointer hover:text-gray-400 hover:scale-105"> COVID 19</li>
+                <li class="hover:cursor-pointer hover:text-gray-400 hover:scale-105"> CAMPGAINS</li>
+            </ul>
+        </div>
+        <div class="flex flex-row gap-4 h-8">
+            <img class="hover:cursor-pointer" src="Assets/search-icon.png" alt="">
+            <p class="bg-pink-500 text-white px-3 rounded flex items-center justify-center hover:cursor-pointer hover:bg-pink-400">iService</p>
+        </div>
+    </nav>
+
+
+    <div class="h-screen px-20 grid grid-cols-2 md:px-8 gap-10 px-8 lg:px-20 ">
+        <!--left side-->
+
+        <div class=" flex items-center ">
+            <div class="flex flex-col items-start justify-center h-full gap-4 pr-12  ">
+                <p class="lg:text-7xl text-4xl font-bold "> Chase Your Dream with us </p>
+
+                <p class="text-2xl pr-20">The harder you work for something, the greater you'll feel when you achieve
+                    it.
+                </p>
+
+
+                <div class="flex flex-row gap-4 ">
+                    <p class="bg-pink-500 text-white px-4 py-1 rounded-2xl hover:cursor-pointer hover:bg-pink-400">APPLY ONLINE</p>
+                    <p class="border-solid text-pink-600 border-pink-500 border-2 px-4 py-1 rounded-2xl hover:cursor-pointer hover:text-pink-400 hover:bg-gray-100">LOAN CACULATOR
+                    </p>
+                </div>
+
+                <div class="flex flex-row items-center gap-4">
+                    <div flex="flex flex-row justify-center items-center "> 
+                        <img class="rounded-2xl p-1 hover:cursor-pointer hover:shadow-red-500 shadow" src="Assets/phone.png" alt="">
+                    </div>
+                    <p class="text-xl font-bold hover:cursor-pointer hover:text-gray-600">1659</p>
+                    <p class="text-xl font-bold">|</p>
+                    <div flex="flex justify-center items-center ">
+                        <img class="rounded-2xl p-1 hover:cursor-pointer hover:shadow-blue-500 shadow" src="Assets/facebook.png" alt="">
+                    </div>
+                    <div flex="flex flex-row justify-center items-center">
+                        <img class="rounded-2xl p-1 hover:cursor-pointer hover:shadow-red-500 shadow" src="Assets/youtube.png" alt="">
+                    </div>
+
+                    <div flex="flex  justify-center items-center">
+                        <img class="rounded-2xl p-1 hover:cursor-pointer hover:shadow-blue-500 shadow" src="Assets/linkedin.png" alt="">
+                    </div>
+
+                    <div flex="flex justify-center items-center">
+                        <img class="rounded-2xl p-1 hover:cursor-pointer hover:shadow-pink-500 shadow" src="Assets/instagram.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <img class="absolute left-[39%] w-[60%]" src="Assets/hero-image.png">
+
+            <div class="absolute top-[15%] left-[45.8%] w-36 h-10 flex flex-row gap-4 items-center justify-center rounded-2xl bg-white shadow-md shadow-black 
+                        hover: hover:cursor-pointer hover:shadow-gray-400">
+                <img src="Assets/car.png" alt="">
+                <p>Car loan</p>
+            </div>
+
+            <div
+                class="absolute top-[35%] left-[85%] w-36 h-10 flex flex-row gap-4 items-center justify-center rounded-2xl bg-white shadow-md shadow-black
+                hover: hover:cursor-pointer hover:shadow-gray-400">
+                <img src="Assets/House.png" alt="">
+                <p>Home loan</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

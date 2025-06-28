@@ -1,0 +1,25 @@
+.content{
+    margin: 20px;
+    padding: 10px;
+}
+
+.para{
+    margin: 10px 0 ;
+    padding: 10px;
+    color: white;
+}
+
+.primary{
+    background-color: blue;   
+}
+.secondary{
+    background-color: red;
+}
+.highlight{
+    background-color: green;
+    font-weight: bold;
+}
+.paraNote{
+    background-color: rgb(13, 54, 54);
+    font-style: italic;
+}

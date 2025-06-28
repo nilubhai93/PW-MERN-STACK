@@ -1,0 +1,39 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+}
+
+.container{
+    background-color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+h1{
+    text-align: center;
+}
+
+#todoInput{
+    background-color: rgb(239, 234, 234);
+    width:75%;
+    padding: 10px;
+    margin-right:10px;
+    border: 2px solid #bc6060;
+    border-radius: 5px;
+    /* border: none; */
+}
+
+#addTodo{
+    padding: 10px 20px;
+    background-color: rgb(0, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor:pointer;
+}

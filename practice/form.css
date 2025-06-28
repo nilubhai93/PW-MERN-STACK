@@ -1,0 +1,52 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+#heading{
+    margin-top: 30px;
+}
+
+#loginForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputContainer{
+    margin: 20px;
+    padding:20px;
+    width: 350px;
+    border-radius: 20px;
+    background-color: aquamarine; 
+}
+
+.input{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#dateofbirth{
+    margin-right:14%;
+}
+#gender{
+    margin-right:31%;
+}
+#color{
+    margin-right:37%;
+}
+#submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#submitbutton{
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 16px;
+    cursor:pointer;
+}
