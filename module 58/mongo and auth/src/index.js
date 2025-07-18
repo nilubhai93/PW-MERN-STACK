@@ -1,7 +1,9 @@
 const express = require("express");
-const port = 3000;
 const app = express();
+const serverConfig = require("./config/serverConfig.js")
 
-app.listen(port,()=>{
-    console.log(`ser in on port no:${port}...`)
+
+
+app.listen(serverConfig.PORT,()=>{
+    console.log(`server is on PORT no:${serverConfig.PORT}...`)
 })
