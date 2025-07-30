@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const serverConfig = require("./config/serverConfig.js");
 const connectDB = require("./config/dbconfig.js");
+const User = require("./schema/userSchema.js");
 
 
 app.use(express.json())
@@ -20,4 +21,15 @@ app.post("/ping",(req, res)=>{
 app.listen(serverConfig.PORT,async()=>{
     await connectDB();
     console.log(`server is on PORT no:${serverConfig.PORT}...`)
+    
+
+    const newUser = await User.create({
+        email:"a@gmail.coom",
+        password:"1234",
+        firstName:"Niladri",
+        lastName:"Maji",
+        mobileNum:"123456789"
+    });
+    console.log("create neww user"),
+    console.log(newUser)
 })
