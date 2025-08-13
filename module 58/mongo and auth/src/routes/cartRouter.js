@@ -1,4 +1,5 @@
-const express = require("express")
+const express = require("express");
+const { getCartById } = require("../controllers/cartCOntroller");
 const cartRouter = express.Router();
 
-cartRouter.get("./:id" , )
+cartRouter.get("./:id" , getCartById )
