@@ -4,12 +4,14 @@ const app = express();
 const serverConfig = require("./config/serverConfig.js");
 const connectDB = require("./config/dbconfig.js");
 const User = require("./schema/userSchema.js");
+const userRouter = require("./routes/userRoutes.js");
 
 
 app.use(express.json())
 app.use(express.text())
 app.use(express.urlencoded())
 
+app.use("./users", userRouter)
 
 app.post("/ping",(req, res)=>{
     console.log(req.body);
@@ -33,3 +35,5 @@ app.listen(serverConfig.PORT,async()=>{
     console.log("create neww user"),
     console.log(newUser)
 })
+
+
