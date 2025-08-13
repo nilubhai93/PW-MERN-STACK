@@ -5,6 +5,7 @@ const serverConfig = require("./config/serverConfig.js");
 const connectDB = require("./config/dbconfig.js");
 const User = require("./schema/userSchema.js");
 const userRouter = require("./routes/userRoutes.js");
+const { cartRouter } = require("./routes/cartRouter.js");
 
 
 app.use(express.json())
@@ -12,6 +13,7 @@ app.use(express.text())
 app.use(express.urlencoded())
 
 app.use("./users", userRouter)
+app.use("./carts", cartRouter)
 
 app.post("/ping",(req, res)=>{
     console.log(req.body);

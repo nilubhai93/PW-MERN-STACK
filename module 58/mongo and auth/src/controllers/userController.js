@@ -1,6 +1,6 @@
 const {model} = require("mongoose")
 
-function createUser(){
+function createUser(req , res){
     console.log("controller called")
 }
 
